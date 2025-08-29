@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Texture Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="LLP BANNER LOGO White.png" alt="Light Lab Pro" class="logo">
+            </div>
+            <div class="header-text">
+                <h1 class="title">PROTOTYPE TEXTURE GENERATOR</h1>
+                <div class="subtitle">Professional Test Environment Texture Creator</div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="controls-panel">
+                <div class="controls-column">
+                    <div class="control-group">
+                        <h3>PROJECT DETAILS</h3>
+                        <div class="input-group">
+                            <label for="projectTitle">Project Title:</label>
+                            <input type="text" id="projectTitle" value="PROTOTYPE-001" placeholder="Enter project title">
+                        </div>
+                        <div class="input-group">
+                            <label for="projectCode">Project Code:</label>
+                            <input type="text" id="projectCode" value="PTX-2024" placeholder="Enter project code">
+                        </div>
+                        <div class="input-group">
+                            <label for="version">Version:</label>
+                            <input type="text" id="version" value="v1.0.0" placeholder="Enter version">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>MEASUREMENT SETTINGS</h3>
+                        <div class="input-group">
+                            <label for="scale">Scale (units):</label>
+                            <input type="text" id="scale" value="1.0m" placeholder="Enter scale">
+                        </div>
+                        <div class="input-group">
+                            <label for="gridSize">Grid Size:</label>
+                            <select id="gridSize">
+                                <option value="10">10x10</option>
+                                <option value="20" selected>20x20</option>
+                                <option value="50">50x50</option>
+                                <option value="100">100x100</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>VISUAL STYLE</h3>
+                                                 <div class="input-group">
+                             <label for="colorScheme">Color Scheme:</label>
+                             <select id="colorScheme">
+                                 <option value="blue" selected>Blue Tech</option>
+                                 <option value="green">Green HUD</option>
+                                 <option value="orange">Orange Warning</option>
+                                 <option value="purple">Purple Sci-Fi</option>
+                                 <option value="red">Red Alert</option>
+                                 <option value="white">White Clean</option>
+                                 <option value="light-gray">Light Gray</option>
+                                 <option value="cream">Cream Paper</option>
+                                 <option value="light-blue">Light Blue</option>
+                                 <option value="light-green">Light Green</option>
+                                 <option value="gold">Gold Premium</option>
+                                 <option value="pink">Pink Neon</option>
+                                 <option value="cyan">Cyan Digital</option>
+                                 <option value="yellow">Yellow Warning</option>
+                                 <option value="brown">Brown Industrial</option>
+                                 <option value="teal">Teal Ocean</option>
+                                 <option value="magenta">Magenta Cyber</option>
+                                 <option value="lime">Lime Toxic</option>
+                                 <option value="navy">Navy Military</option>
+                                 <option value="coral">Coral Sunset</option>
+                             </select>
+                         </div>
+                        <div class="input-group">
+                            <label for="textureSize">Texture Size:</label>
+                            <select id="textureSize">
+                                <option value="512">512x512</option>
+                                <option value="1024" selected>1024x1024</option>
+                                <option value="2048">2048x2048</option>
+                                <option value="4096">4096x4096</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="noiseLevel">Noise Level:</label>
+                            <input type="range" id="noiseLevel" min="0" max="100" value="30">
+                            <span id="noiseValue">30%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls-column">
+                    <div class="control-group">
+                        <h3>BORDER ELEMENTS</h3>
+                                                 <div class="checkbox-group">
+                             <label>
+                                 <input type="checkbox" id="showGrid" checked>
+                                 Show Grid
+                             </label>
+                             <label>
+                                 <input type="checkbox" id="showMeasurements" checked>
+                                 Show Measurements
+                             </label>
+                             <label>
+                                 <input type="checkbox" id="showCoordinates" checked>
+                                 Show Coordinates
+                             </label>
+                             <label>
+                                 <input type="checkbox" id="showWarningStripes" checked>
+                                 Warning Stripes
+                             </label>
+                             <label>
+                                 <input type="checkbox" id="showTechPatterns" checked>
+                                 Tech Patterns
+                             </label>
+                             <label>
+                                 <input type="checkbox" id="showCrosshairs">
+                                 Crosshairs
+                             </label>
+                             <label>
+                                 <input type="checkbox" id="showTargetRings">
+                                 Target Rings
+                             </label>
+                             <label>
+                                 <input type="checkbox" id="showDataStreams">
+                                 Data Streams
+                             </label>
+                             <label>
+                                 <input type="checkbox" id="showCircuitPatterns">
+                                 Circuit Patterns
+                             </label>
+                             <label>
+                                 <input type="checkbox" id="showRadarSweep">
+                                 Radar Sweep
+                             </label>
+                         </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>TEXT POSITIONING</h3>
+                        <div class="text-position-controls">
+                            <div class="position-group">
+                                <label>Project Title Position:</label>
+                                <div class="position-inputs">
+                                    <input type="number" id="titleX" value="50" min="0" max="100" step="1" placeholder="X %">
+                                    <input type="number" id="titleY" value="5" min="0" max="100" step="1" placeholder="Y %">
+                                </div>
+                            </div>
+                            <div class="position-group">
+                                <label>Project Code Position:</label>
+                                <div class="position-inputs">
+                                    <input type="number" id="codeX" value="50" min="0" max="100" step="1" placeholder="X %">
+                                    <input type="number" id="codeY" value="95" min="0" max="100" step="1" placeholder="Y %">
+                                </div>
+                            </div>
+                            <div class="position-group">
+                                <label>Scale Text Position:</label>
+                                <div class="position-inputs">
+                                    <input type="number" id="scaleX" value="50" min="0" max="100" step="1" placeholder="X %">
+                                    <input type="number" id="scaleY" value="15" min="0" max="100" step="1" placeholder="Y %">
+                                </div>
+                            </div>
+                            <div class="position-group">
+                                <label>Version Position (Top):</label>
+                                <div class="position-inputs">
+                                    <input type="number" id="versionTopX" value="10" min="0" max="100" step="1" placeholder="X %">
+                                    <input type="number" id="versionTopY" value="5" min="0" max="100" step="1" placeholder="Y %">
+                                </div>
+                            </div>
+                            <div class="position-group">
+                                <label>Version Position (Bottom):</label>
+                                <div class="position-inputs">
+                                    <input type="number" id="versionBottomX" value="90" min="0" max="100" step="1" placeholder="X %">
+                                    <input type="number" id="versionBottomY" value="95" min="0" max="100" step="1" placeholder="Y %">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls-column">
+                    <div class="control-group">
+                        <h3>TEXT SIZING</h3>
+                        <div class="text-size-controls">
+                                                         <div class="size-group">
+                                 <label for="titleSize">Title Size (%):</label>
+                                 <input type="range" id="titleSize" min="25" max="500" value="100">
+                                 <span id="titleSizeValue">100%</span>
+                             </div>
+                             <div class="size-group">
+                                 <label for="codeSize">Code Size (%):</label>
+                                 <input type="range" id="codeSize" min="25" max="500" value="100">
+                                 <span id="codeSizeValue">100%</span>
+                             </div>
+                             <div class="size-group">
+                                 <label for="scaleSize">Scale Size (%):</label>
+                                 <input type="range" id="scaleSize" min="25" max="500" value="100">
+                                 <span id="scaleSizeValue">100%</span>
+                             </div>
+                             <div class="size-group">
+                                 <label for="versionSize">Version Size (%):</label>
+                                 <input type="range" id="versionSize" min="25" max="500" value="100">
+                                 <span id="versionSizeValue">100%</span>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>EXPORT OPTIONS</h3>
+                        <div class="button-group">
+                            <button id="generateBtn" class="btn btn-primary">GENERATE TEXTURE</button>
+                            <button id="downloadBtn" class="btn btn-secondary" disabled>DOWNLOAD PNG</button>
+                            <button id="downloadJpgBtn" class="btn btn-secondary" disabled>DOWNLOAD JPG</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-panel">
+                <div class="preview-container">
+                    <canvas id="textureCanvas" width="1024" height="1024"></canvas>
+                    <div class="preview-overlay">
+                        <div class="preview-info">
+                            <span id="previewSize">1024x1024</span>
+                            <span id="previewFormat">PNG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="presets-panel">
+            <h3>PRESETS</h3>
+                         <div class="preset-buttons">
+                 <button class="preset-btn" data-preset="vehicle-test">Vehicle Test Area</button>
+                 <button class="preset-btn" data-preset="weapon-test">Weapon Test Range</button>
+                 <button class="preset-btn" data-preset="ai-test">AI Test Environment</button>
+                 <button class="preset-btn" data-preset="space-station">Space Station</button>
+                 <button class="preset-btn" data-preset="laboratory">Laboratory</button>
+                 <button class="preset-btn" data-preset="clean-white">Clean White</button>
+                 <button class="preset-btn" data-preset="documentation">Documentation</button>
+                 <button class="preset-btn" data-preset="drone-test">Drone Test Zone</button>
+                 <button class="preset-btn" data-preset="robotics-lab">Robotics Lab</button>
+                 <button class="preset-btn" data-preset="cyber-range">Cyber Range</button>
+                 <button class="preset-btn" data-preset="medical-test">Medical Testing</button>
+                 <button class="preset-btn" data-preset="construction">Construction Site</button>
+                 <button class="preset-btn" data-preset="aerospace">Aerospace Testing</button>
+                 <button class="preset-btn" data-preset="military-base">Military Base</button>
+                 <button class="preset-btn" data-preset="research-facility">Research Facility</button>
+                 <button class="preset-btn" data-preset="industrial-plant">Industrial Plant</button>
+                 <button class="preset-btn" data-preset="data-center">Data Center</button>
+                 <button class="preset-btn" data-preset="training-ground">Training Ground</button>
+                 <button class="preset-btn" data-preset="emergency-response">Emergency Response</button>
+                 <button class="preset-btn" data-preset="surveillance">Surveillance System</button>
+             </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
